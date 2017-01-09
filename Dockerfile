@@ -22,7 +22,7 @@ RUN     buildDeps='curl tar make gcc musl-dev' \
         && cd / \
         && rm -rf /usr/src/runit \
         && apk del $buildDeps \
-        && mkdir /etc/services
+        && mkdir /services
 
 RUN     addgroup stakater && \
         adduser -S -G stakater stakater && \
@@ -33,4 +33,4 @@ VOLUME 	["/home/stakater"]
 
 RUN     rm -rf /var/cache/apk/*
 
-CMD     ["sh", "-c", "exec runsvdir -P /etc/services/"]
+CMD     ["sh", "-c", "exec runsvdir -P /services/"]

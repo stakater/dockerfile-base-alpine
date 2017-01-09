@@ -10,5 +10,5 @@ How to run:
 docker run -it --rm stakater/alpine /bin/bash
 ```
 
-To add any service daemons, you can create `runit` entries. Just write a shell script and add it to `/etc/services` like `/etc/services/myDaemon/run`. Where `myDaemon` is the name of your daemon and the script should be placed by the name `run`.
+To add any service daemons, you can create `runit` entries. Just write a shell script and add it to `/services` like `/services/myDaemon/run`. Where `myDaemon` is the name of your daemon and the script should be placed by the name `run`.
 Runit will be responsible for keeping your daemon running.
