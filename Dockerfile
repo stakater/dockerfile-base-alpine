@@ -1,7 +1,7 @@
 FROM    alpine:3.4
 LABEL   authors="Hazim <hazim_malik@hotmail.com>"
 
-RUN     apk --no-cache add --update bash sudo nano sudo zip bzip2 fontconfig wget
+RUN     apk --no-cache add --update bash sudo nano sudo zip bzip2 fontconfig wget curl
 
 # Download and install runit
 RUN     buildDeps='curl tar make gcc musl-dev' \
