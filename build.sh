@@ -14,8 +14,8 @@ echo "ALPINE_VERSION: ${_alpine_version}"
 echo "DOCKER TAG: ${_alpine_tag}"
 echo "RELEASE BUILD: ${_release_build}"
 
-docker build --tag "stakater/alpine:${_alpine_tag}"  --no-cache=true .
+docker build --tag "stakater/base-alpine:${_alpine_tag}"  --no-cache=true .
 
 if [ $_release_build == true ]; then
-	docker build --tag "stakater/alpine:latest"  --no-cache=true .
+	docker build --tag "stakater/base-alpine:latest"  --no-cache=true .
 fi
