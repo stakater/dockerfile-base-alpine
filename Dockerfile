@@ -4,7 +4,7 @@ LABEL   authors="Hazim <hazim_malik@hotmail.com>"
 RUN     apk --no-cache add --update bash sudo nano sudo zip bzip2 fontconfig wget curl
 
 # Download and install runit
-RUN     buildDeps='curl tar make gcc musl-dev' \
+RUN     buildDeps='tar make gcc musl-dev' \
         RUNIT_VERSION="2.1.2" \
         RUNIT_DOWNLOAD_URL="http://smarden.org/runit/runit-2.1.2.tar.gz" \
         RUNIT_DOWNLOAD_SHA1="398f7bf995acd58797c1d4a7bcd75cc1fc83aa66" \
@@ -22,7 +22,7 @@ RUN     buildDeps='curl tar make gcc musl-dev' \
         && cd / \
         && rm -rf /usr/src/runit \
         && apk del $buildDeps \
-        && mkdir /services
+        && sudo mkdir -p /etc/service
 
 RUN     addgroup stakater && \
         adduser -S -G stakater stakater && \
@@ -33,4 +33,4 @@ VOLUME 	["/home/stakater"]
 
 RUN     rm -rf /var/cache/apk/*
 
-CMD     ["sh", "-c", "exec runsvdir -P /services/"]
+CMD     ["sh", "-c", "exec runsvdir -P /etc/service/"]
