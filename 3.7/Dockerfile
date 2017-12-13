@@ -6,7 +6,7 @@ RUN     apk --no-cache add --update bash sudo nano sudo zip bzip2 fontconfig wge
 # Download and install runit
 RUN     buildDeps='tar make gcc musl-dev' \
         RUNIT_VERSION="2.1.2" \
-        RUNIT_DOWNLOAD_URL="http://smarden.org/runit/runit-$RUNIT_VERSION.tar.gz" \
+        RUNIT_DOWNLOAD_URL="http://smarden.org/runit/runit-${RUNIT_VERSION}.tar.gz" \
         RUNIT_DOWNLOAD_SHA1="398f7bf995acd58797c1d4a7bcd75cc1fc83aa66" \
         && set -x \
         && apk add --update $buildDeps \
