@@ -3,7 +3,7 @@
 This is an alpine docker image used as base for other docker images in stakater.
 
 ### Supported tags and respective Dockerfile links
-* 3.7, latest ([3.7/Dockerfile](https://github.com/stakater/dockerfile-base-alpine/blob/master/3.6/Dockerfile))
+* 3.7, latest ([3.7/Dockerfile](https://github.com/stakater/dockerfile-base-alpine/blob/master/3.7/Dockerfile))
 * 3.6 ([3.6/Dockerfile](https://github.com/stakater/dockerfile-base-alpine/blob/master/3.6/Dockerfile))
 * 3.5 ([3.5/Dockerfile](https://github.com/stakater/dockerfile-base-alpine/blob/master/3.5/Dockerfile))
 * 3.4 ([3.4/Dockerfile](https://github.com/stakater/dockerfile-base-alpine/blob/master/3.4/Dockerfile))
