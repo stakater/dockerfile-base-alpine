@@ -26,6 +26,5 @@ RUN     buildDeps='tar make gcc musl-dev' \
 
 RUN     rm -rf /var/cache/apk/*
 
-
 COPY    /runsvinit /
 ENTRYPOINT  ["/runsvinit"]
